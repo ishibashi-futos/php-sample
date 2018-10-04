@@ -13,12 +13,26 @@
           <table class="table table-hover table-striped">
             <thead>
               <tr>
-                <th>実施予定日</th>
-                <th>曜日</th>
-                <th>完了</th>
+                <th class="col-sm-6">実施予定日</th>
+                <th class="col-sm-3">曜日</th>
+                <th class="col-sm-3">完了</th>
               </tr>
             </thead>
             <tbody>
+              <?php
+                $arrays = array(
+                  0 => "月",
+                  1 => "火",
+                  2 => "水",
+                  3 => "木",
+                  4 => "金",
+                  5 => "土",
+                  6 => "日"
+                );
+                foreach($arrays as $key => $value) {
+                  print "{$key} => ${value}</br>";
+                }
+              ?>
               <tr>
                 <td>2018/10/1</td>
                 <td>月</td>
