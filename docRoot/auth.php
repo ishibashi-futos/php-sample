@@ -27,6 +27,9 @@
       }
     }
   }
+  if(!$auth) {
+    print '<meta http-equiv="refresh" content="0;URL=\'./error.php\'" />';
+  }
 ?>
 </head>
 <body></body>
