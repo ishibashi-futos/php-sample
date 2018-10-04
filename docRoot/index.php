@@ -11,6 +11,8 @@
         .card {
             max-width: 350px;
             padding: 40px 40px;
+            margin-right: auto;
+            margin-left : auto;
         }
         .container {
             max-width: 430px;
