@@ -8,11 +8,34 @@
 <body>
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
-        <a>col-md-6-1</a>
-      </div>
-      <div class="col-md-6">
-        <a>col-md-6-2</a>
+      <div class="col-md-12">
+        <div class="table-responsive">
+          <table class="table table-hover table-striped">
+            <thead>
+              <tr>
+                <th>実施予定日</th>
+                <th>曜日</th>
+                <th>完了</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2018/10/1</td>
+                <td>月</td>
+                <td>
+                  <button class="btn btn-lg btn-primary btn-block" type="submit">完了</button>
+                </td>
+              </tr>
+              <tr>
+                <td>2018/10/2</td>
+                <td>火</td>
+                <td>
+                  <button class="btn btn-lg btn-primary btn-block" type="submit">完了</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>
