@@ -20,6 +20,7 @@
             </thead>
             <tbody>
               <?php
+                $refDate = new DateTime("2018-10-01");
                 $arrays = array(
                   0 => "月",
                   1 => "火",
@@ -30,10 +31,15 @@
                   6 => "日"
                 );
                 foreach($arrays as $key => $value) {
-                  print "{$key} => ${value}</br>";
+                  $refDate->modify('+6 days');
+                  print "<tr>";
+                  print "<td>{$refDate->format('Y年m月d日')}</td>";
+                  print "<td>{$value}</td>";
+                  print "<button class='btn btn-lg btn-primary btn-block' type='submit'>完了</button>";
+                  print "</tr>";
                 }
               ?>
-              <tr>
+              <!-- <tr>
                 <td>2018/10/1</td>
                 <td>月</td>
                 <td>
@@ -46,7 +52,7 @@
                 <td>
                   <button class="btn btn-lg btn-primary btn-block" type="submit">完了</button>
                 </td>
-              </tr>
+              </tr> -->
             </tbody>
           </table>
         </div>
