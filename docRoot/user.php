@@ -13,9 +13,9 @@
           <table class="table table-hover table-striped">
             <thead>
               <tr>
-                <th class="col-sm-6">実施予定日</th>
-                <th class="col-sm-3">曜日</th>
-                <th class="col-sm-3">完了</th>
+                <th class="col-md-6">実施予定日</th>
+                <th class="col-md-3">曜日</th>
+                <th class="col-md-3">完了</th>
               </tr>
             </thead>
             <tbody>
@@ -31,12 +31,12 @@
                   6 => "日"
                 );
                 foreach($arrays as $key => $value) {
-                  $refDate->modify('+1 days');
                   print "<tr>";
                   print "<td>{$refDate->format('Y年m月d日')}</td>";
                   print "<td>{$value}</td>";
                   print "<td><button class='btn btn-lg btn-primary btn-block' type='submit'>完了</button></td>";
                   print "</tr>";
+                  $refDate->modify('+1 days');
                 }
               ?>
               <!-- <tr>
