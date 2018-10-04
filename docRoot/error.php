@@ -14,6 +14,14 @@
           <h1>エラーが発生しました</br>
               ログインページに戻ってください。
           </h1>
+          <h2>
+            <?php
+              $ISSUE = $_GET["error"];
+              if($ISSUE == "login") {
+                print "loginに失敗しました.";
+              }
+            ?>
+          </h2>
       </div>
       <a href="/index.php">戻る</a>
     </div>

@@ -28,7 +28,7 @@
     }
   }
   if(!$auth) {
-    print '<meta http-equiv="refresh" content="0;URL=\'./error.php\'" />';
+    print '<meta http-equiv="refresh" content="0;URL=\'./error.php?error=login\'" />';
   }
 ?>
 </head>
