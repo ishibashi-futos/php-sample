@@ -31,11 +31,11 @@
                   6 => "日"
                 );
                 foreach($arrays as $key => $value) {
-                  $refDate->modify('+6 days');
+                  $refDate->modify('+1 days');
                   print "<tr>";
                   print "<td>{$refDate->format('Y年m月d日')}</td>";
                   print "<td>{$value}</td>";
-                  print "<button class='btn btn-lg btn-primary btn-block' type='submit'>完了</button>";
+                  print "<td><button class='btn btn-lg btn-primary btn-block' type='submit'>完了</button></td>";
                   print "</tr>";
                 }
               ?>
