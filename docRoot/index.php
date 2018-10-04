@@ -37,10 +37,10 @@
     </style>
 </head>
 <body>
-    <div class="page-header text-center">
-        <h1>Login</h1>
-    </div>
     <div class="container">
+        <div class="page-header text-center">
+            <h1>Login</h1>
+        </div>
         <div class="card card-container">
             <form  action="/auth.php" method="post" class="form-signin mb10">
                 <input type="email" name="email" class="form-control mb10" placeholder="Email Address" requied autofocus />
