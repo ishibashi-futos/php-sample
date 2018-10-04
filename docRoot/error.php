@@ -11,17 +11,15 @@
   <div class="container">
     <div>
       <div class="page-header text-center">
-          <h1>エラーが発生しました</br>
-              ログインページに戻ってください。
-          </h1>
-          <h2>
+          <h1>
             <?php
               $ISSUE = $_GET["error"];
               if($ISSUE == "login") {
-                print "loginに失敗しました.";
+                print "loginに失敗しました.</br>";
               }
             ?>
-          </h2>
+              ログインページに戻ってください。
+          </h1>
       </div>
       <a href="/index.php">戻る</a>
     </div>
