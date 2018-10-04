@@ -15,15 +15,15 @@
       $role = $lines[2];
       if($userName == $email && $userPassword == $password && $role == "admin") {
         $auth = true;
-	//print '<meta http-equiv="refresh" content="0;URL=\'https://www.google.co.jp/\'" />';
-	print 'Welcome administrator!';
-	print base64_encode($userName . ',' . $userPassword . ',' . "admin");
-	break;
+        //print '<meta http-equiv="refresh" content="0;URL=\'https://www.google.co.jp/\'" />';
+        print 'Welcome administrator!';
+	      print base64_encode($userName . ',' . $userPassword . ',' . "admin");
+        break;
       } else if ($userName == $email && $userPassword == $password && $role == "user") {
         $auth = true;
-	//print '<meta http-equiv="refresh" content="0;URL=\'https://www.yahoo.co.jp/\'" />';
-	print 'Welcome user!';
-	break;
+        //print '<meta http-equiv="refresh" content="0;URL=\'https://www.yahoo.co.jp/\'" />';
+        print 'Welcome user!';
+        break;
       }
     }
   }

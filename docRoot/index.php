@@ -18,6 +18,15 @@
             margin-left : auto;
         }
     }
+    @media screen and (min-width: 640px) {
+        .card {
+            padding: 40px 40px;
+        }
+        .container {
+            margin-right: auto;
+            margin-left : auto;
+        }
+    }
     .page-header {
         border-bottom: double 1px #f0f0f0;
         margin-bottom: 10px;
