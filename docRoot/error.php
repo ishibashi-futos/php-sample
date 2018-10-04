@@ -16,6 +16,8 @@
               $ISSUE = $_GET["error"];
               if($ISSUE == "login") {
                 print "loginに失敗しました.</br>";
+              } else {
+                print "サーバエラーが発生しました.</br>";
               }
             ?>
               ログインページに戻ってください。
