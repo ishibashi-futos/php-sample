@@ -37,17 +37,17 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="page-header text-center">
-            <h1>Login</h1>
-        </div>
-        <div class="card card-container">
-            <form  action="/auth.php" method="post" class="form-signin mb10">
-                <input type="email" name="email" class="form-control mb10" placeholder="Email Address" requied autofocus />
-                <input type="password" name="password" class="form-control" placeholder="Password" required />
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-            </form>
-        </div>
+  <div class="container">
+    <div class="page-header text-center">
+        <h1>Login</h1>
     </div>
+    <div class="card card-container">
+      <form  action="/auth.php" method="post" class="form-signin mb10">
+        <input type="email" name="email" class="form-control mb10" placeholder="Email Address" requied autofocus />
+        <input type="password" name="password" class="form-control" placeholder="Password" required />
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+    </div>
+  </div>
 </body>
 </html>
