@@ -1,0 +1,8 @@
+service:
+  php:
+    image: php:apache
+    ports:
+      - 8080:80
+    volumes:
+      - ./docRoot:/var/www/html
+    restart: always
