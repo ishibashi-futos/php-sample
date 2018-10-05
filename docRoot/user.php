@@ -20,7 +20,13 @@
             </thead>
             <tbody>
               <?php
-                $refDate = new DateTime("2018-10-01");
+                $now = new DateTime();
+                // 設定ファイルから基準日を取得する
+                $refDate = '';
+                $refFile = fopen('refDate.ini', 'r');
+                if($refFile) {
+                  $refDate = new DateTime(rtrim(fgets($refFile), "\r"));
+                }
                 $arrays = array(
                   0 => "月",
                   1 => "火",
@@ -39,20 +45,6 @@
                   $refDate->modify('+1 days');
                 }
               ?>
-              <!-- <tr>
-                <td>2018/10/1</td>
-                <td>月</td>
-                <td>
-                  <button class="btn btn-lg btn-primary btn-block" type="submit">完了</button>
-                </td>
-              </tr>
-              <tr>
-                <td>2018/10/2</td>
-                <td>火</td>
-                <td>
-                  <button class="btn btn-lg btn-primary btn-block" type="submit">完了</button>
-                </td>
-              </tr> -->
             </tbody>
           </table>
         </div>
