@@ -17,12 +17,14 @@
         //print '<meta http-equiv="refresh" content="0;URL=\'https://www.google.co.jp/\'" />';
         // cookieをセット、有効期限は1時間
         setcookie('authKey', base64_encode($userName . ',' . $userPassword . ',' . "admin"), time() + 3600);
+        header("Location: /admin.php");
         break;
       } else if ($userName == $email && $userPassword == $password && $role == "user") {
         $auth = true;
         //print '<meta http-equiv="refresh" content="0;URL=\'https://www.yahoo.co.jp/\'" />';
         // cookieをセット、有効期限は1時間
         setcookie('authKey', base64_encode($userName . ',' . $userPassword . ',' . "user"), time() + 3600);
+        header("Location: /user.php");
         break;
       }
     }
