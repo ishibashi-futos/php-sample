@@ -4,7 +4,7 @@
 <?php
   $email = $_POST["email"];
   $password = $_POST["password"];
-  $authFile = fopen('userlist.csv', 'r');
+  $authFile = fopen('./data/userlist.csv', 'r');
   $auth = false;
   if($authFile) {
     while($line = fgets($authFile)) {

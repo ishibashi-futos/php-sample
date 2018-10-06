@@ -23,7 +23,7 @@
                 $now = new DateTime();
                 // 設定ファイルから基準日を取得する
                 $refDate = '';
-                $refFile = fopen('refDate.ini', 'r');
+                $refFile = fopen('./conf/refDate.ini', 'r');
                 if($refFile) {
                   $refDate = new DateTime(rtrim(fgets($refFile), "\r"));
                 }
