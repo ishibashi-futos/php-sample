@@ -1,4 +1,3 @@
-<!DOCTYPE HTML>
 <?php
   // 認証チェック
   $email = $_POST["email"];
