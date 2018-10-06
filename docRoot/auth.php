@@ -1,6 +1,4 @@
 <!DOCTYPE HTML>
-<html lang="ja">
-<head>
 <?php
   // 認証チェック
   $email = $_POST["email"];
@@ -34,6 +32,3 @@
     print '<meta http-equiv="refresh" content="0;URL=\'./error.php?error=login\'" />';
   }
 ?>
-</head>
-<body></body>
-</html>
