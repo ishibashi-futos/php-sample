@@ -37,8 +37,14 @@ if($authorized) {
   }
   fclose($workScheduleFile);
 
+  $isFirst = true;
   foreach($resultArray as $key => $value) {
-    file_put_contents($woskSchedulePath, "{$key},{$value}\n",LOCK_EX);
+    if($isFirst) {
+      file_put_contents($woskSchedulePath, "{$key},{$value}\n",LOCK_EX);
+      $isFirst = false;
+    } else {
+      file_put_contents($woskSchedulePath, "{$key},{$value}\n",FILE_APPEND | LOCK_EX);
+    }
   }
 }
 
