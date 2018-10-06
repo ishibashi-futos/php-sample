@@ -20,7 +20,7 @@ if($authKey) {
 
 if($authorized) {
   $week = isset($_POST["week"]) ? $_POST["week"] : null;
-  $woskSchedulePath = "../data/workSchedult.csv";
+  $woskSchedulePath = "../data/workSchedule.csv";
   $workScheduleFile = fopen($woskSchedulePath, 'r');
   $resultArray = array();
   if($workScheduleFile) {
