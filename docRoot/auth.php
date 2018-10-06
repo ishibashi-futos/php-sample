@@ -8,7 +8,7 @@
   $auth = false;
   if($authFile) {
     while($line = fgets($authFile)) {
-      $line = rtrim($line, "\n");    
+      $line = rtrim($line, "\n");
       $lines = explode(',', $line);
       $userName = $lines[0];
       $userPassword = $lines[1];
