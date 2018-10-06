@@ -29,7 +29,7 @@ if($authorized) {
       $lines = explode(',', $line);
       // 読込が完了したデータのうち、weekにマッチする行のステータスを1(終了)に書き換える.
       if($lines[0] == $week) {
-        $resultArray += array($lines[0]=>1);
+        $resultArray += array($lines[0]=>"1");
       } else {
         $resultArray += array($lines[0]=>$lines[1]);
       }
