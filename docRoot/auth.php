@@ -22,6 +22,7 @@
       } else if ($userName == $email && $userPassword == $password && $role == "user") {
         $auth = true;
         //print '<meta http-equiv="refresh" content="0;URL=\'https://www.yahoo.co.jp/\'" />';
+	      print base64_encode($userName . ',' . $userPassword . ',' . "user");
         print 'Welcome user!';
         break;
       }
