@@ -18,8 +18,8 @@
             <thead>
               <tr>
                 <th class="col-xs-6 col-md-6">実施予定日</th>
-                <th class="col-xs-3 col-md-6">曜日</th>
-                <th class="col-xs-3 col-md-6">完了</th>
+                <th class="col-xs-2 col-md-2">曜日</th>
+                <th class="col-xs-4 col-md-4">完了</th>
               </tr>
             </thead>
             <tbody>
