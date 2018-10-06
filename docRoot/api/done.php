@@ -36,13 +36,16 @@ if($authorized) {
     }
   }
   fclose($workScheduleFile);
+  var_dump($resultArray);
 
   $isFirst = true;
   foreach($resultArray as $key => $value) {
     if($isFirst) {
+      // 最初は頭から書き込み
       file_put_contents($woskSchedulePath, "{$key},{$value}\n",LOCK_EX);
       $isFirst = false;
     } else {
+      // つぎから追記
       file_put_contents($woskSchedulePath, "{$key},{$value}\n",FILE_APPEND | LOCK_EX);
     }
   }
