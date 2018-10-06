@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <title>完了報告</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="js/user.js"></script>
     <style>
-      
     </style>
 </head>
 <body>
@@ -16,9 +17,9 @@
           <table class="table table-hover table-striped">
             <thead>
               <tr>
-                <th class="col-md-6">実施予定日</th>
-                <th class="col-md-3">曜日</th>
-                <th class="col-md-3">完了</th>
+                <th class="col-xs-6 col-md-6">実施予定日</th>
+                <th class="col-xs-3 col-md-6">曜日</th>
+                <th class="col-xs-3 col-md-6">完了</th>
               </tr>
             </thead>
             <tbody>
