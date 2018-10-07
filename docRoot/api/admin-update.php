@@ -105,7 +105,9 @@ if($authorized) {
 
     http_response_code(201);
   } catch(Exception $e) {
+    $data = $e;
     http_response_code(500);
+    echo json_encode(compact('data'));
   }
 }
 
