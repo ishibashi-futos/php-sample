@@ -47,7 +47,7 @@
                   6 => "日"
                 );
                 // 作業が必要な日、完了(1)/未完了(0)をファイルから取得する
-                $workScheduleFile = fopen('workSchedule.csv', 'r');
+                $workScheduleFile = fopen('./data/workSchedule.csv', 'r');
                 $schedule = array();
                 if($workScheduleFile) {
                   while($line = fgets($workScheduleFile)) {
