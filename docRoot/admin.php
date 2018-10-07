@@ -12,9 +12,6 @@
     <script src="bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
     <link rel="stylesheet" href="bootstrap-datepicker/bootstrap-datepicker.min.css">
     <style>
-      .form-control{
-        width 75px;
-      }
     </style>
 </head>
 <body>
@@ -26,7 +23,7 @@
             <thead>
               <tr>
                 <th class="col-md-6 col-xs-6">実施曜日</th>
-                <th class="col-md-6 col-xs-6">実行制御</th>
+                <th class="col-md-6 col-xs-6" width='75px'>実行制御</th>
               </tr>
             </thead>
             <tbody>
