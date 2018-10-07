@@ -91,7 +91,7 @@ if($authorized) {
         while($line = fgets($confData)) {
           $lines = explode("=", rtrim($line, "\r\n"));
           if($lines[0] == "alertControl") {
-            $alertControlFlag = "";
+            $alertControlFlag = "1";
           } else if ($lines[0] == "refDate") {
             $alertControlDate = $lines[1];
           }
