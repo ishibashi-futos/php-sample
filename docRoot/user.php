@@ -59,7 +59,7 @@
                   if($schedule[$key] == "0"){
                     print "<td><button class='btn btn-sm btn-primary btn-block' type='button' onClick='doneWork({$key});'>未完了</button></td>";
                   } else if($schedule[$key] == "1") {
-                    print "<td><label class='label label-success'>完了</label></td>";
+                    print "<td><div class='label label-success'>完了</div></td>";
                   } else {
                     print "<td><span class='label label-default'>-</span></td>";
                   }
