@@ -13,11 +13,9 @@
     <link rel="stylesheet" href="bootstrap-datepicker/bootstrap-datepicker.min.css">
     <style>
       table {
-        border-collapse: collapse;
         width: 100%;
       }
       th, td {
-        border: 1px solid #dedede;
         padding: .5em .75em;
       }
     </style>
@@ -30,8 +28,8 @@
           <table class="table table-hover table-striped">
             <thead>
               <tr>
-                <th class="col-md-6">実施曜日</th>
-                <th class="col-md-6">実行制御</th>
+                <th class="col-md-6 col-xs-6">実施曜日</th>
+                <th class="col-md-6 col-xs-6">実行制御</th>
               </tr>
             </thead>
             <tbody>
