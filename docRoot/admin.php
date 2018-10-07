@@ -59,8 +59,13 @@
                   print "<tr>";
                   print "<td>{$value}</td>";
                   print "<td><select name='work{$key}'>";
-                  print "<option value='0'>無効</option>";
-                  print "<option value='1'>有効</option>";
+                  if($value == "1") {
+                    print "<option value='0'>無効</option>";
+                    print "<option value='1' selected='selected'>有効</option>";
+                  } else {
+                    print "<option value='0' selected='selected'>無効</option>";
+                    print "<option value='1'>有効</option>";
+                  }
                   print "</select></td>";
                   print "</tr>";
                   $refDate->modify('+1 days');
