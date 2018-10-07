@@ -58,7 +58,7 @@
                 foreach($arrays as $key => $value) {
                   print "<tr>";
                   print "<td>{$value}</td>";
-                  print "<td><select name='work{$key}'>";
+                  print "<td><select class='form-control' name='work{$key}'>";
                   if($value == "1") {
                     print "<option value='0'>無効</option>";
                     print "<option value='1' selected='selected'>有効</option>";
