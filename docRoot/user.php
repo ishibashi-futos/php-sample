@@ -57,9 +57,9 @@
                   print "<td>{$value}</td>";
                   // master情報に応じて、ボタンの表示、非表示を制御
                   if($schedule[$key] == "0"){
-                    print "<td><button class='btn btn-sm btn-primary btn-block' type='button' onClick='doneWork({$key});'>完了</button></td>";
+                    print "<td><button class='btn btn-sm btn-primary btn-block' type='button' onClick='doneWork({$key});'>未完了</button></td>";
                   } else if($schedule[$key] == "1") {
-                    print "<td><span class='label label-success'>完了</span></td>";
+                    print "<td><label class='label label-success'>完了</label></td>";
                   } else {
                     print "<td><span class='label label-default'>-</span></td>";
                   }
