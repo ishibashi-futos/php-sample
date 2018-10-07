@@ -12,6 +12,9 @@
     <script src="bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
     <link rel="stylesheet" href="bootstrap-datepicker/bootstrap-datepicker.min.css">
     <style>
+      .form-control{
+        width 75px;
+      }
     </style>
 </head>
 <body>
