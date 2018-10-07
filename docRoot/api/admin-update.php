@@ -29,6 +29,10 @@ if($authorized) {
     $woskScheduleData += array(5=>$_POST["5"]);
     $woskScheduleData += array(6=>$_POST["6"]);
 
+    foreach(array_keys($_POST) as $key) {
+      print $key;
+    }
+
     $woskSchedulePath = "../data/workSchedule.csv";
     $workScheduleFile = fopen($woskSchedulePath, 'r');
     $resultArray = array();
