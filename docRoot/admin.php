@@ -113,6 +113,7 @@
           </div>
         </div>
       </div>
+      <button class='btn btn-sm btn-primary btn-block' type='button' onClick='update();'>設定を更新する</button>
     </div>
   </div>
 </body>
