@@ -61,7 +61,7 @@
                   } else if($schedule[$key] == "1") {
                     print "<td><button class='btn btn-sm btn-success btn-block' type='button' disabled='disabled' >完了</button></td>";
                   } else {
-                    print "<td><button class='btn btn-sm btn-default btn-block' type='button' disabled='disabled' >-</button></td>";
+                    print "<td><button class='btn btn-sm btn-default btn-block' type='button' disabled='disabled' >OFF</button></td>";
                   }
                   print "</tr>";
                   $refDate->modify('+1 days');
