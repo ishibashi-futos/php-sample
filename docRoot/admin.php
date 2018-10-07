@@ -78,7 +78,7 @@
             <div class="col-sm-9 form-inline">
               <div class="input-group date">
                 <?php
-                  $confData = fopen("./date/alertControl.ini");
+                  $confData = fopen("./date/alertControl.ini", 'r');
                   if($confData) {
                     while($line = fgets($confData)) {
                       $lines = explode("=", rtrim($line, "\r\n"));
@@ -92,7 +92,7 @@
                   fclose($confData);
                 ?>
                 <?php
-                  $confData = fopen("./date/alertControl.ini");
+                  $confData = fopen("./date/alertControl.ini", 'r');
                   if($confData) {
                     while($line = fgets($confData)) {
                       $lines = explode("=", rtrim($line, "\r\n"));
