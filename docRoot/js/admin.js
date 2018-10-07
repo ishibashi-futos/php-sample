@@ -20,7 +20,7 @@ function update() {
     "4" : $('#updateForm [name=work4] option:selected').val(),
     "5" : $('#updateForm [name=work5] option:selected').val(),
     "6" : $('#updateForm [name=work6] option:selected').val(),
-    "checked" : $('#updateForm [name=alertMailFlag]:ckecked').val(),
+    "checked" : $('#updateForm [name=alertMailFlag]:checked').val(),
     "calender" : $('#updateForm [name=calender]').val()
   };
   console.log(param);
