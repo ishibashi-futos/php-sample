@@ -59,9 +59,9 @@
                   if($schedule[$key] == "0"){
                     print "<td><button class='btn btn-sm btn-primary btn-block' type='button' onClick='doneWork({$key});'>未完了</button></td>";
                   } else if($schedule[$key] == "1") {
-                    print "<td><p class='text-success'>完了</p></td>";
+                    print "<td><button class='btn btn-sm btn-success btn-block' type='button' disabled='disabled' >完了</button></td>";
                   } else {
-                    print "<td><p class='text-muted'>完了</p></td>";
+                    print "<td><button class='btn btn-sm btn-default btn-block' type='button' disabled='disabled' >-</button></td>";
                   }
                   print "</tr>";
                   $refDate->modify('+1 days');
