@@ -104,7 +104,6 @@
                   }
                   fclose($confData);
                 ?>
-                <input type="text" class="form-control" value="20170621">
                 <div class="input-group-addon">
                   <i class="fa fa-calendar"></i>
                 </div>
