@@ -78,13 +78,15 @@
             <label class="col-sm-3 control-label">Default</label>
             <div class="col-sm-9 form-inline">
               <div class="input-group date">
+                <input type="checkbox" id="alertMailFlag" name="alertMailFlag" value="">
                 <input type="text" class="form-control" value="20170621">
                 <div class="input-group-addon">
                   <i class="fa fa-calendar"></i>
+                </div>
+                <a>までアラートしない</a>
               </div>
             </div>
           </div>
-        </div>
         </div>
       </div>
     </div>
