@@ -57,7 +57,7 @@
                     $schedule += array($lines[0]=>$lines[1]); 
                   }
                 }
-                var_dump($schedult);
+                var_dump($schedule);
                 foreach($arrays as $key => $value) {
                   print "<tr>";
                   print "<td>{$value}</td>";
