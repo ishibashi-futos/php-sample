@@ -13,15 +13,15 @@ $(function(){
  */
 function update() {
   var param = {
-    "0" : $('#update [name=work0] option:selected').val(),
-    "1" : $('#update [name=work1] option:selected').val(),
-    "2" : $('#update [name=work2] option:selected').val(),
-    "3" : $('#update [name=work3] option:selected').val(),
-    "4" : $('#update [name=work4] option:selected').val(),
-    "5" : $('#update [name=work5] option:selected').val(),
-    "6" : $('#update [name=work6] option:selected').val(),
-    "checked" : $('#update [name=alertMailFlag]:ckecked').val(),
-    "calender" : $('#update [name=calender]').val()
+    "0" : $('#updateForm [name=work0] option:selected').val(),
+    "1" : $('#updateForm [name=work1] option:selected').val(),
+    "2" : $('#updateForm [name=work2] option:selected').val(),
+    "3" : $('#updateForm [name=work3] option:selected').val(),
+    "4" : $('#updateForm [name=work4] option:selected').val(),
+    "5" : $('#updateForm [name=work5] option:selected').val(),
+    "6" : $('#updateForm [name=work6] option:selected').val(),
+    "checked" : $('#updateForm [name=alertMailFlag]:ckecked').val(),
+    "calender" : $('#updateForm [name=calender]').val()
   };
   console.log(param);
 }
