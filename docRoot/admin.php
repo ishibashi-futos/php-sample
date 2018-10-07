@@ -23,7 +23,7 @@
             <thead>
               <tr>
                 <th class="col-md-6 col-xs-6">実施曜日</th>
-                <th class="col-md-6 col-xs-6" width='75px'>実行制御</th>
+                <th class="col-md-6 col-xs-6">実行制御</th>
               </tr>
             </thead>
             <tbody>
@@ -57,7 +57,7 @@
                 foreach($arrays as $key => $value) {
                   print "<tr>";
                   print "<td>{$value}</td>";
-                  print "<td><select class='selector form-control' name='work{$key}'>";
+                  print "<td><select class='selector form-control' name='work{$key}' style='width: 75px'>";
                   if($value == "1") {
                     print "<option value='0'>無効</option>";
                     print "<option value='1' selected='selected'>有効</option>";
