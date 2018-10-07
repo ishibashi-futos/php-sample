@@ -12,6 +12,9 @@ $(function(){
  * FormDataを取得し、設定を更新する
  */
 function update() {
+  var cookie = getCookieArray();
+  var authKey = cookie["authKey"];
+
   var param = {
     "0" : $('#updateForm [name=work0] option:selected').val(),
     "1" : $('#updateForm [name=work1] option:selected').val(),
@@ -23,5 +26,19 @@ function update() {
     "checked" : $('#updateForm [name=alertMailFlag]:checked').val(),
     "calender" : $('#updateForm [name=calender]').val()
   };
-  console.log(param);
+  $.ajax({
+    type: "POST",
+    headers:  {
+      "authKey" : authKey
+    },
+    url: "/api/admin-update.php",
+    data: param
+  }).done(function(){
+    window.location.reload();
+  }).fail(function(){
+    // エラーが発生した時
+    notification("エラーが発生しました。管理者に問い合わせてください。");
+    disableCookies();
+    window.location.href("/login.php");
+  });
 }
