@@ -75,10 +75,35 @@
             </tbody>
           </table>
           <div class="form-group" id="datepicker-default">
-            <label class="col-sm-3 control-label">Default</label>
             <div class="col-sm-9 form-inline">
               <div class="input-group date">
-                <input type="checkbox" id="alertMailFlag" name="alertMailFlag" value="">
+                <?php
+                  $confData = fopen("./date/alertControlDate.ini");
+                  if($confData) {
+                    while($line = fgets($confData)) {
+                      $lines = explode("=", rtrim($line, "\r\n"));
+                      if($lines[0] == "alertControl" && $lines[1] == "1") {
+                        print "<input type='checkbox' id='alertMailFlag' name='alertMailFlag' value='' checked>";
+                      } else if ($lines[0] == "alertControl" && $lines[1] == "1") {
+                        print "<input type='checkbox' id='alertMailFlag' name='alertMailFlag' value=''>";
+                      }
+                    }
+                  }
+                  fclose($confData);
+                ?>
+                <?php
+                  $confData = fopen("./date/alertControlDate.ini");
+                  if($confData) {
+                    while($line = fgets($confData)) {
+                      $lines = explode("=", rtrim($line, "\r\n"));
+                      if($lines[0] == "refDate") {
+                        $date = new DateTime($lines[1]);
+                        print "<input type='text' class='form-control' value='{$date->format('Y年m月d日')}'>";
+                      }
+                    }
+                  }
+                  fclose($confData);
+                ?>
                 <input type="text" class="form-control" value="20170621">
                 <div class="input-group-addon">
                   <i class="fa fa-calendar"></i>
