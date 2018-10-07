@@ -10,6 +10,8 @@
     <!-- DatePicker -->
     <script src="bootstrap-datepicker/bootstrap-datepicker.ja.min.js"></script>
     <script src="bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <script src="js/admin.js"></script>
+    <script src="js/common.js"></script>
     <link rel="stylesheet" href="bootstrap-datepicker/bootstrap-datepicker.min.css">
     <style>
     </style>
