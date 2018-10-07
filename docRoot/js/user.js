@@ -1,5 +1,6 @@
 function doneWork(week) {
-  var authKey = document.cookie.indexOf('authKey');
+  var cookie = getCookieArray();
+  var authKey = cookie["authKey"];
 
   var param = {
     "week": week
