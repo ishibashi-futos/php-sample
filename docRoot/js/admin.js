@@ -34,7 +34,6 @@ function update() {
     url: "/api/admin-update.php",
     data: param
   }).done(function(data){
-    console.log(data);
     window.location.reload();
   }).fail(function(){
     // エラーが発生した時

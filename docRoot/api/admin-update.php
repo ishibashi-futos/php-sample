@@ -21,15 +21,13 @@ if($authorized) {
   try {
     // workSchedule.csvを更新する
     $workScheduleData = array();
-    $woskScheduleData += array(0=>$_POST["0"]);
-    $woskScheduleData += array(1=>$_POST["1"]);
-    $woskScheduleData += array(2=>$_POST["2"]);
-    $woskScheduleData += array(3=>$_POST["3"]);
-    $woskScheduleData += array(4=>$_POST["4"]);
-    $woskScheduleData += array(5=>$_POST["5"]);
-    $woskScheduleData += array(6=>$_POST["6"]);
-
-    echo json_encode(compact('workScheduleData'));
+    $woskScheduleData += array(0=>$_POST[0]);
+    $woskScheduleData += array(1=>$_POST[1]);
+    $woskScheduleData += array(2=>$_POST[2]);
+    $woskScheduleData += array(3=>$_POST[3]);
+    $woskScheduleData += array(4=>$_POST[4]);
+    $woskScheduleData += array(5=>$_POST[5]);
+    $woskScheduleData += array(6=>$_POST[6]);
 
     $woskSchedulePath = "../data/workSchedule.csv";
     $workScheduleFile = fopen($woskSchedulePath, 'r');
