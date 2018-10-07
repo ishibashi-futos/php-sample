@@ -17,5 +17,8 @@ function doneWork(week) {
     window.location.reload();
   }).fail(function(){
     // エラーが発生した時
+    notification("エラーが発生しました。管理者に問い合わせてください。");
+    disableCookies();
+    window.location.href("/login.php");
   });
 }
