@@ -62,7 +62,7 @@
                   print "<tr>";
                   print "<td>{$value}</td>";
                   print "<td><select class='selector form-control' name='work{$key}' style='width: 75px'>";
-                  if($value == "1" || $value == "0") {
+                  if($schedule[$key] == "1" || $schedule[$key] == "0") {
                     print "<option value='0'>無効</option>";
                     print "<option value='1' selected='selected'>有効</option>";
                   } else {
