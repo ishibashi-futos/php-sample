@@ -75,14 +75,16 @@
             </tbody>
           </table>
           <div class="form-group" id="datepicker-default">
-             <label class="col-sm-3 control-label">Default</label>
-             <div class="col-sm-9 form-inline">
-               <input type="text" class="form-control" value="" />
-               <div class="input-group-addon">
-                 <i class="fa fa-calendar"></i>
-               </div>
-             </div>
+            <label class="col-sm-3 control-label">Default</label>
+            <div class="col-sm-9 form-inline">
+              <div class="input-group date">
+                <input type="text" class="form-control" value="20170621">
+                <div class="input-group-addon">
+                  <i class="fa fa-calendar"></i>
+              </div>
+            </div>
           </div>
+        </div>
         </div>
       </div>
     </div>
