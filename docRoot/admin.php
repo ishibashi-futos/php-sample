@@ -57,11 +57,12 @@
                     $schedule += array($lines[0]=>$lines[1]); 
                   }
                 }
+                var_dump($schedult);
                 foreach($arrays as $key => $value) {
                   print "<tr>";
                   print "<td>{$value}</td>";
                   print "<td><select class='selector form-control' name='work{$key}' style='width: 75px'>";
-                  if($value == "1") {
+                  if($value == "1" || $value == "0") {
                     print "<option value='0'>無効</option>";
                     print "<option value='1' selected='selected'>有効</option>";
                   } else {
