@@ -21,13 +21,13 @@ if($authorized) {
   try {
     // workSchedule.csvを更新する
     $workScheduleData = array();
-    $woskScheduleData += array(0=>$_POST[0]);
-    $woskScheduleData += array(1=>$_POST[1]);
-    $woskScheduleData += array(2=>$_POST[2]);
-    $woskScheduleData += array(3=>$_POST[3]);
-    $woskScheduleData += array(4=>$_POST[4]);
-    $woskScheduleData += array(5=>$_POST[5]);
-    $woskScheduleData += array(6=>$_POST[6]);
+    $workScheduleData += array('0'=>"{$_POST[0]}");
+    $workScheduleData += array('1'=>"{$_POST[1]}");
+    $workScheduleData += array('2'=>"{$_POST[2]}");
+    $workScheduleData += array('3'=>"{$_POST[3]}");
+    $workScheduleData += array('4'=>"{$_POST[4]}");
+    $workScheduleData += array('5'=>"{$_POST[5]}");
+    $workScheduleData += array('6'=>"{$_POST[6]}");
 
     $woskSchedulePath = "../data/workSchedule.csv";
     $workScheduleFile = fopen($woskSchedulePath, 'r');
@@ -84,7 +84,7 @@ if($authorized) {
       file_put_contents($alertControlFilePathm, "refDate={$alertControlDate}\n", LOCK_EX);
       file_put_contents($alertControlFilePathm, "alertControl={$alertControlFlag}\n", FILE_APPEND | LOCK_EX);
     } else {
-      $alertControlFilePath = "./data/alertControl.ini";
+      $alertControlFilePath = "../data/alertControl.ini";
       $confData = fopen($alertControlFilePath, 'r');
       $alertControlFlag = 1;
       $alertControlDate = "";
