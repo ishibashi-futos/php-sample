@@ -65,6 +65,7 @@ if($authorized) {
       }
     }
     // alertControlを更新する
+    $alertControlFilePath = "../data/alertControl.ini";
     if($_POST["checked"] == "") {
       $alertControlFilePath = "../data/alertControl.ini";
       $confData = fopen($alertControlFilePath, 'r');
