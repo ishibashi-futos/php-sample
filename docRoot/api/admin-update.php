@@ -67,7 +67,6 @@ if($authorized) {
     // alertControlを更新する
     $alertControlFilePath = "../data/alertControl.ini";
     if($_POST["checked"] == "") {
-      $alertControlFilePath = "../data/alertControl.ini";
       $confData = fopen($alertControlFilePath, 'r');
       $alertControlFlag = 1;
       $alertControlDate = "";
@@ -82,10 +81,9 @@ if($authorized) {
         }
       }
       fclose($confData);
-      file_put_contents($alertControlFilePathm, "refDate={$alertControlDate}\n", LOCK_EX);
-      file_put_contents($alertControlFilePathm, "alertControl={$alertControlFlag}\n", FILE_APPEND | LOCK_EX);
+      file_put_contents($alertControlFilePath, "refDate={$alertControlDate}\n", LOCK_EX);
+      file_put_contents($alertControlFilePath, "alertControl={$alertControlFlag}\n", FILE_APPEND | LOCK_EX);
     } else {
-      $alertControlFilePath = "../data/alertControl.ini";
       $confData = fopen($alertControlFilePath, 'r');
       $alertControlFlag = 1;
       $alertControlDate = "";
@@ -100,8 +98,8 @@ if($authorized) {
         }
       }
       fclose($confData);
-      file_put_contents($alertControlFilePathm, "refDate={$alertControlDate}\n", LOCK_EX);
-      file_put_contents($alertControlFilePathm, "alertControl={$alertControlFlag}\n", FILE_APPEND | LOCK_EX);
+      file_put_contents($alertControlFilePath, "refDate={$alertControlDate}\n", LOCK_EX);
+      file_put_contents($alertControlFilePath, "alertControl={$alertControlFlag}\n", FILE_APPEND | LOCK_EX);
     }
 
     http_response_code(201);
