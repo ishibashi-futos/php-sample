@@ -81,7 +81,7 @@ if($authorized) {
         }
       }
       fclose($confData);
-      file_put_contents($alertControlFilePath, "refDate={$alertControlDate}\n", LOCK_EX);
+      file_put_contents($alertControlFilePath, "refDate={$alertControlDate->format('Ymd')}\n", LOCK_EX);
       file_put_contents($alertControlFilePath, "alertControl={$alertControlFlag}\n", FILE_APPEND | LOCK_EX);
     } else {
       $confData = fopen($alertControlFilePath, 'r');
@@ -91,14 +91,14 @@ if($authorized) {
         while($line = fgets($confData)) {
           $lines = explode("=", rtrim($line, "\r\n"));
           if($lines[0] == "alertControl") {
-            $alertControlFlag = "1";
+            $alertControlFlag = "0";
           } else if ($lines[0] == "refDate") {
             $alertControlDate = $lines[1];
           }
         }
       }
       fclose($confData);
-      file_put_contents($alertControlFilePath, "refDate={$alertControlDate}\n", LOCK_EX);
+      file_put_contents($alertControlFilePath, "refDate={$alertControlDate->format('Ymd')}\n", LOCK_EX);
       file_put_contents($alertControlFilePath, "alertControl={$alertControlFlag}\n", FILE_APPEND | LOCK_EX);
     }
 
