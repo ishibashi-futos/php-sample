@@ -19,6 +19,7 @@
 <body>
   <div class="container">
     <div class="row">
+      <form id="updateForm">
       <div class="col-md-12">
         <div class="table-responsive">
           <table class="table table-hover table-striped">
@@ -98,7 +99,7 @@
                       $lines = explode("=", rtrim($line, "\r\n"));
                       if($lines[0] == "refDate") {
                         $date = new DateTime($lines[1]);
-                        print "<input type='text' class='form-control' value='{$date->format('Y年m月d日')}'>";
+                        print "<input type='text' class='form-control' name='calender' value='{$date->format('Y年m月d日')}'>";
                       }
                     }
                   }
@@ -114,6 +115,7 @@
         </div>
       </div>
       <button class='btn btn-sm btn-primary btn-block' type='button' onClick='update();'>設定を更新する</button>
+      </form>
     </div>
   </div>
 </body>
