@@ -66,7 +66,7 @@ if($authorized) {
     }
     // alertControlを更新する
     $alertControlFilePath = "../data/alertControl.ini";
-    if($_POST["checked"] == "") {
+    if($_POST["checked"]) {
       $confData = fopen($alertControlFilePath, 'r');
       $alertControlFlag = 1;
       $alertControlDate = "";
@@ -74,14 +74,14 @@ if($authorized) {
         while($line = fgets($confData)) {
           $lines = explode("=", rtrim($line, "\r\n"));
           if($lines[0] == "alertControl") {
-            $alertControlFlag = "";
+            $alertControlFlag = "1";
           } else if ($lines[0] == "refDate") {
-            $alertControlDate = date('ymd', strtotime($_POST["calender"]));
+            $alertControlDate = new DateTime(strtotime($_POST["calender"]));
           }
         }
       }
       fclose($confData);
-      file_put_contents($alertControlFilePath, "refDate={$alertControlDate->format('Ymd')}\n", LOCK_EX);
+      file_put_contents($alertControlFilePath, "refDate={$alertControlDate->format('ymd')}\n", LOCK_EX);
       file_put_contents($alertControlFilePath, "alertControl={$alertControlFlag}\n", FILE_APPEND | LOCK_EX);
     } else {
       $confData = fopen($alertControlFilePath, 'r');
@@ -98,7 +98,7 @@ if($authorized) {
         }
       }
       fclose($confData);
-      file_put_contents($alertControlFilePath, "refDate={$alertControlDate->format('Ymd')}\n", LOCK_EX);
+      file_put_contents($alertControlFilePath, "refDate={$alertControlDate}\n", LOCK_EX);
       file_put_contents($alertControlFilePath, "alertControl={$alertControlFlag}\n", FILE_APPEND | LOCK_EX);
     }
 
