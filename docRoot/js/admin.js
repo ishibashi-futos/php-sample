@@ -39,7 +39,7 @@ function update() {
   }).fail(function(error){
     // エラーが発生した時
     notification("エラーが発生しました。管理者に問い合わせてください。");
-    disableCookies();
+    console.log(error);
     window.location.href = "/login.php";
   });
 }
