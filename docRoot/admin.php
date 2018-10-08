@@ -86,7 +86,7 @@
                       $lines = explode("=", rtrim($line, "\r\n"));
                       if($lines[0] == "alertControl" && $lines[1] == "1") {
                         print "<input type='checkbox' id='alertMailFlag' name='alertMailFlag' value='' checked>";
-                      } else if ($lines[0] == "alertControl" && $lines[1] == "1") {
+                      } else if ($lines[0] == "alertControl" && $lines[1] == "0") {
                         print "<input type='checkbox' id='alertMailFlag' name='alertMailFlag' value=''>";
                       }
                     }
