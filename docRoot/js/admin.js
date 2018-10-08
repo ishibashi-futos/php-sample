@@ -34,11 +34,12 @@ function update() {
     url: "/api/admin-update.php",
     data: param
   }).done(function(data){
+    notification("更新が完了しました");
     window.location.reload();
-  }).fail(function(){
+  }).fail(function(error){
     // エラーが発生した時
     notification("エラーが発生しました。管理者に問い合わせてください。");
     disableCookies();
-    window.location.href("/login.php");
+    window.location.href = "/login.php";
   });
 }
