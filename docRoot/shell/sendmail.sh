@@ -4,6 +4,7 @@
 # カレントに移動
 cd $(dirname $0)
 source ../data/alertControl.ini
+# 送信が必要かチェックする
 refDate=$(echo "${refDate}" 23:59:59)
 if [ $(date -d "${refDate}" "+%s") -gt $(date "+%s") ]; then
   if [ "${alertControl}" -eq "1" ]; then

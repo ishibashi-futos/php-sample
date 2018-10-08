@@ -1,0 +1,4 @@
+TITLE_TEXT=業務が行われていません
+BODY_TEXT=業務が行われていません、すぐに実施してください。
+FROM_ADDRESS=hogefuga@example.com
+TO_ADDRESS=hogehoge@example.com
