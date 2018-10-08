@@ -76,11 +76,16 @@ if($authorized) {
           if($lines[0] == "alertControl") {
             $alertControlFlag = "1";
           } else if ($lines[0] == "refDate") {
-            $alertControlDate = new DateTime(strtotime($_POST["calender"]));
+            $alertControlDate = $_POST["calender"];
           }
         }
       }
       fclose($confData);
+      // 加工
+      $alertControlDate = str_replace('年', '-', $alertControlDate);
+      $alertControlDate = str_replace('月', '-', $alertControlDate);
+      $alertControlDate = str_replace('日', '-', $alertControlDate);
+      $alertControlDate = new DataTime($alertControlDate);
       file_put_contents($alertControlFilePath, "refDate={$alertControlDate->format('ymd')}\n", LOCK_EX);
       file_put_contents($alertControlFilePath, "alertControl={$alertControlFlag}\n", FILE_APPEND | LOCK_EX);
     } else {
