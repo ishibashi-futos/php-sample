@@ -85,7 +85,7 @@ if($authorized) {
       $alertControlDate = str_replace('年', '-', $alertControlDate);
       $alertControlDate = str_replace('月', '-', $alertControlDate);
       $alertControlDate = str_replace('日', '-', $alertControlDate);
-      $alertControlDate = new DataTime($alertControlDate);
+      $alertControlDate = new DateTime($alertControlDate);
       file_put_contents($alertControlFilePath, "refDate={$alertControlDate->format('Ymd')}\n", LOCK_EX);
       file_put_contents($alertControlFilePath, "alertControl={$alertControlFlag}\n", FILE_APPEND | LOCK_EX);
     } else {
