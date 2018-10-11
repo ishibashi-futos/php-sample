@@ -100,7 +100,7 @@
                       $lines = explode("=", rtrim($line, "\r\n"));
                       if($lines[0] == "refDate") {
                         $date = new DateTime($lines[1]);
-                        print "<input type='text' class='form-control' name='calender' value='{$date->format('Y年m月d日')}'>";
+                        print "<input type='text' class='form-control' name='calender' style='width: 210px' value='{$date->format('Y年m月d日')}'>";
                       }
                     }
                   }
