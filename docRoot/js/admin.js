@@ -34,6 +34,5 @@ function update() {
     // エラーが発生した時
     notification("エラーが発生しました。管理者に問い合わせてください。");
     console.log(error);
-    window.location.href = "/login.php";
   });
 }
