@@ -12,9 +12,6 @@ $(function(){
  * FormDataを取得し、設定を更新する
  */
 function update() {
-  var cookie = getCookieArray();
-  var authKey = cookie["authKey"];
-
   var param = {
     "0" : $('#updateForm [name=work0] option:selected').val(),
     "1" : $('#updateForm [name=work1] option:selected').val(),
@@ -28,10 +25,7 @@ function update() {
   };
   $.ajax({
     type: "POST",
-    headers:  {
-      "authKey" : authKey
-    },
-    url: "/api/admin-update.php",
+    url: contextPath + "/api/admin-update.php",
     data: param
   }).done(function(data){
     notification("更新が完了しました");

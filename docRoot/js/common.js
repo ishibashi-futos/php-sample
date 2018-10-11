@@ -1,19 +1,4 @@
 /**
- * cookie値を連想配列として取得する
- */
-function getCookieArray(){
-  var arr = new Array();
-  if(document.cookie != ''){
-    var tmp = document.cookie.split('; ');
-    for(var i=0;i<tmp.length;i++){
-      var data = tmp[i].split('=');
-      arr[data[0]] = decodeURIComponent(data[1]);
-    }
-  }
-  return arr;
-}
-
-/**
  * Notification
  */
 function notification(message) {
@@ -37,12 +22,4 @@ function notification(message) {
   }
 }
 
-/**
- * remove cookie
- */
-function disableCookies() {
-  var cookies = $.cookie();
-  for(key in cookies) {
-    $.cookieRemove(key);
-  }
-}
+const contextPath = "/pages";
