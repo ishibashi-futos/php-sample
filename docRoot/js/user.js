@@ -6,7 +6,7 @@ function doneWork(week) {
 
   $.ajax({
     type: "POST",
-    url: contextPath + "/api/done.php",
+    url: getContextPath() + "/api/done.php",
     data: param
   }).done(function(){
     window.location.reload();

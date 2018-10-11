@@ -25,7 +25,7 @@ function update() {
   };
   $.ajax({
     type: "POST",
-    url: contextPath + "/api/admin-update.php",
+    url: getContextPath() + "/api/admin-update.php",
     data: param
   }).done(function(data){
     notification("更新が完了しました");

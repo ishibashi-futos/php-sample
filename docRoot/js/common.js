@@ -22,4 +22,7 @@ function notification(message) {
   }
 }
 
-const contextPath = "/pages";
+
+function getContextPath() {
+  return "/pages";
+}
