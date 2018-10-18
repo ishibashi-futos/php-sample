@@ -23,11 +23,11 @@
 - conf/refDate.iniを編集する
   現在の週の月曜日の日付をYYYY-MM-DD形式で入力する
 
-- workSchedule.csvを編集する
+- data/workSchedule.csvを編集する
   csvファイルは1列目0~6が月~日に対応、2列目が1=完了、0=未完了、-が作業不要を表しています。
   上記に従い設定してください。（こちらは画面からも変更可能です）
 
 - js/common.jsを編集する
-  59行目の、"/pages"となっている部分を、現在利用しているサーバのコンテキストパスに変更する
+  27行目の、"/pages"となっている部分を、現在利用しているサーバのコンテキストパスに変更する
   https://www.example.com/pages/admin.html
                           ↑この部分（/pages）がコンテキストパス
